@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Expense Guru</title>
+
+    <!-- Tailwind CSS Link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Header Section start -->
+    <header>
+        <div class="container mx-auto my-10 flex items-center justify-center px-3">
+            <h1 class="text-4xl font-bold text-indigo-400">Income Expense Guru</h1>
+            <img src="./images/money-bag.png" alt="money-bag-icon" class="ml-2">
+        </div>
+    </header>
+    <!-- Header section end  -->
+    <main class="container mx-auto">
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-10 pb-5">
+                <!-- Left image start  -->
+                <div class="md:col-span-3 bg-[url('./images/money.jpg')] h-[400px] md:h-full bg-cover">
+
+                </div>
+                <!-- left image end -->
+
+                <!-- Right money calculation start -->
+                <div class="md:col-span-2">
+                    <div class="text-center bg-gray-100 py-5">
+                        <!-- Error field  -->
+                        <p id="error-field" class="text-red-400 font-medium"></p>
+                        <!-- Income start  -->
+                        <div>
+                            <h3 class="text-xl font-bold py-5">Income</h3>
+                            <label for="" class="font-medium mr-2">Income: </label>
+                            <input id="income-input" type="text" placeholder="Enter your income" class="border border-gray-300 bg-slate-200 px-1 py-1 rounded">
+                        </div>
+                        <!-- Income End  -->
+
+                        <!-- Expense Start  -->
+                        <div class="pb-5">
+                            <h3 class="text-xl font-bold py-5">Expense</h3>
+                            <div class="mb-4">
+                                <label for="" class="font-medium mr-2">Food: </label>
+                                <input id="food-expense-input" type="text" placeholder="Food expense" class="border border-gray-300 bg-slate-200 px-1 py-1 rounded">
+                            </div>
+                            <div class="my-4">
+                                <label for="" class="font-medium mr-2">Rent: </label>
+                                <input id="rent-expense-input" type="text" placeholder="Rent expense" class="border border-gray-300 bg-slate-200 px-1 py-1 rounded">
+                            </div>
+                            <div class="my-4">
+                                <label for="" class="font-medium mr-2">Clothes: </label>
+                                <input id="clothes-expense-input" type="text" placeholder="Clothes expense" class="border border-gray-300 bg-slate-200 px-1 py-1 rounded">
+                            </div>
+                            <button id="calculate-btn" type="text" class="bg-indigo-400 px-10 py-1 text-lg text-white font-medium rounded mt-3">Calculate</button>
+                        </div>
+                        <!-- Expense End  -->
+
+                        <!-- Expense and balance result start  -->
+                        <div class="text-xl font-medium leading-10">
+                            <p>Total Expenses: <span id="total-expenses">0</span></p>
+                            <p>Total Balance: <span id="total-balance">0</span></p>
+                        </div>
+                        <!-- Expense and balance result end -->
+
+                        <!-- Saving section start -->
+                        <div class="py-4">
+                            <label for="" class="font-medium mr-2">Save: </label>
+                            <input id="saving-input" type="text" placeholder="Saving %" class="border border-gray-300 bg-slate-200 px-1 py-1 rounded w-24 mr-1"> <span> %
+                            </span>
+                            <button id="saving-btn" type="text" class="bg-indigo-400 px-10 py-1 text-lg text-white font-medium rounded ml-1">Save</button>
+                        </div>
+
+                        <!-- saving result start  -->
+                        <div class="text-xl font-medium leading-10">
+                            <p>Saving Amount: <span id="saving-amount">0</span></p>
+                            <p>Remaining Balance: <span id="remainning-amount">0</span></p>
+                        </div>
+                        <!-- saving result end -->
+
+                        <!-- Saving section end -->
+                    </div>
+                </div>
+                <!-- Right money calculation end -->
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
